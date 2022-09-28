@@ -62,7 +62,7 @@ However, learning how to train a machine learning model, or use an
 existing model, is only one part of a more extensive pipeline for
 practically making use of machine learning in a GLAM setting.
 
-### []{#anchor-2}What's missing?
+### What's missing?
 
 ![](media/image1.png){width="6.2835in" height="1.972in"}
 
