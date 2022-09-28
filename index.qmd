@@ -1,5 +1,31 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+In 1979, two Swedish bands released albums. One of these albums,
+*Voulez-Vous, *was recorded by ABBA in Polar Studios, at its time, one
+of the most advanced --- and expensive --- recording studios in the
+world. The other album, *We\'re Only in it for the Drugs, *by the
+Swedish Punk band [Ebba Grön
+](https://en.wikipedia.org/wiki/Ebba_Grön) was recorded on a mobile
+8-channel mixer in a closed industrial office. Both these albums are
+great, but the resources available to create them were vastly different.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+There is a prevalent perception that machine learning is only for those
+with deep pockets. For example, in 2022, Google created a new Language
+Model, PaLM, but the cost of training such a model is estimated to be
+between \$9M to \$23M. As a result, discussions of machine learning
+often focus on large tech companies because they are deemed to be the
+only ones with the finances to develop and use this technology.
+
+Machine learning, and in particular a branch of machine learning called
+deep learning, has dramatically impacted a range of domains over the
+past ten years. There has been a growing interest in using machine
+learning in gallery, library, archive and museum (GLAM) institutions. A
+barrier to further adoption of machine learning in the GLAM sector is
+the perception that it requires extensive technical skill, data,
+computing power and other resources.
+
+In this book, we want to show that just as [*Ebba
+Grön*](https://en.wikipedia.org/wiki/Ebba_Grön) was able to record a
+seminal album without the resources available to ABBA, GLAM institutions
+can use machine learning for practical work without the resources of
+Google.
