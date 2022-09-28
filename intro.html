@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -137,7 +118,17 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#whats-missing" id="toc-whats-missing" class="nav-link active" data-scroll-target="#whats-missing"><span class="toc-section-number">1.0.1</span>  <span id="anchor-2"></span>What’s missing?</a></li>
+  <li><a href="#whats-covered" id="toc-whats-covered" class="nav-link" data-scroll-target="#whats-covered"><span class="toc-section-number">1.1</span>  <span id="anchor-3"></span>What's covered</a></li>
+  <li><a href="#what-isnt-covered" id="toc-what-isnt-covered" class="nav-link" data-scroll-target="#what-isnt-covered"><span class="toc-section-number">1.2</span>  <span id="anchor-4"></span>What isn't covered</a></li>
+  <li><a href="#who-is-this-for" id="toc-who-is-this-for" class="nav-link" data-scroll-target="#who-is-this-for"><span class="toc-section-number">1.3</span>  <span id="anchor-5"></span>Who is this for?</a></li>
+  <li><a href="#practical-machine-learning-projects" id="toc-practical-machine-learning-projects" class="nav-link" data-scroll-target="#practical-machine-learning-projects"><span class="toc-section-number">2</span>  <span id="anchor-6"></span>(Practical) machine learning projects</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -158,17 +149,55 @@ div.csl-indent {
 
 </header>
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
-<p>See also dfgjdfskjgsdfkj</p>
-<p>afjshjfds</p>
+<p>The growing interest in using Artificial Intelligence/Machine Learning in a GLAM setting is demonstrated by the many initiatives and groups aiming to develop communities and best practices around applying AI/Machine Learning in GLAM settings. These initiatives include; <a href="https://sites.google.com/view/ai4lam">ai4lam</a> and <a href="https://github.com/CENL-Network-Group-AI/">CENEL's AI in Libraries Network Group</a>.</p>
+<p>There are also several funded projects which seek to explore this area, including the <a href="https://www.aeolian-network.net/">AEOLIAN Network</a>, <a href="https://unlockingourdigitalpast.com/">Unlocking our Digital Past</a> and the <a href="https://www.aura-network.net/">AURA Network</a>.</p>
+<p>These more academic projects can produce a range of resources that can be helpful for GLAM institutions wanting to use machine learning. These primarily include publications, code, and, to a lesser extent, datasets. Whilst these projects are essential as part of the development of machine learning within the sector, there are potential limitations to these projects being the sole method of building capacity for machine learning projects within the GLAM community.</p>
+<ul>
+<li>They often have to have some academic focus to get funding, so projects tackling more mundane or ‘business’ problems may not be funded. This might potentially limit the types of machine learning demonstrated by these projects.</li>
+<li>The components of the machine learning process documented through academic publications are often skewed towards particular stages of the overall pipeline, in particular, the development of new models or novel algorithms. These parts of the process can be very important but only make up a part of using machine learning for practical applications.</li>
+<li>Academic projects often have different goals than ‘business as usual’ projects. For academic projects, publishing in well-respected journals remains the primary goal. For BAU projects the outcome is to ‘solve’ a problem. Whilst these can intersect, there can be tensions between the two. For example, an academic publication might be achieved by improving performance on a benchmark dataset at the expense of using a much larger model, whilst the BAU use case might have constraints on what resources can be used for training/inference (a topic we pick up later in this book).</li>
+</ul>
+<p>There is also a growing body of materials focused on teaching GLAM staff topics related to machine learning. A review of some of this material has been carried out by the Teaching and Learning working group of the AI4LAM network <span class="citation" data-cites="Darby2022AITR">(<a href="references.html#ref-Darby2022AITR" role="doc-biblioref"><strong>Darby2022AITR?</strong></a>)</span> This material includes general introductions to machine learning for GLAM staff (<a href="https://github.com/carpentries-incubator/machine-learning-librarians-archivists"><em>https://github.com/carpentries-incubator/machine-learning-librarians-archivists</em></a>), practical introductions to using the Python programming language for machine learning (<a href="https://github.com/sul-cidr/Workshops/tree/master/Intro_to_ML_with_Python"><em>https://github.com/sul-cidr/Workshops/tree/master/Intro_to_ML_with_Python</em></a>) and introductions to a specific tool (<a href="https://github.com/NatLibFi/Annif-tutorial"><em>https://github.com/NatLibFi/Annif-tutorial</em></a>).</p>
+<p>While this more ‘formal’ teaching material is an essential part of enabling GLAM staff to engage with machine learning, there are limitations to relying only on this material. These materials often need to focus on a particular topic, concept or approach within machine learning, for example, an introduction to Named Entity Recognition. However, learning how to train a machine learning model, or use an existing model, is only one part of a more extensive pipeline for practically making use of machine learning in a GLAM setting.</p>
+<section id="whats-missing" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="whats-missing"><span class="header-section-number">1.0.1</span> <span id="anchor-2"></span>What’s missing?</h3>
+<p><img src="media/image1.png" style="width:6.2835in;height:1.972in"></p>
+<p>A recent review of teaching materials <span class="citation" data-cites="Darby2022AITR">(<a href="references.html#ref-Darby2022AITR" role="doc-biblioref"><strong>Darby2022AITR?</strong></a>)</span> for GLAM staff also identified that much of this material was focused on one stage of the machine learning pipeline, namely the ‘creating and training a model’ part of the process. Whilst this is an important component of applying machine learning, many other stages of the process - particularly when seeking to use machine learning in a ‘practical’ setting - are important.</p>
+<p>This book aims to partially fill the gap of open documentation about a machine learning project undertaken in a GLAM institution. It is not intended as a guide to best practice but instead offers an outline of the approach we took with the hope that anyone wanting to embark on a machine learning project in a GLAM setting can learn from our experiences.</p>
+</section>
+<section id="whats-covered" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="whats-covered"><span class="header-section-number">1.1</span> <span id="anchor-3"></span>What's covered</h2>
+<p>The book covers a few key areas:</p>
+<ul>
+<li><p>the motivation of the project</p></li>
+<li><p>the various stages in the pipeline:</p>
+<ul>
+<li>data collection</li>
+<li>data versioning</li>
+<li>model development</li>
+<li>model evaluation</li>
+<li>tracking results</li>
+<li>deployment</li>
+<li>updating the model</li>
+</ul></li>
+</ul>
+<p>All of these are discussed with a particular focus on how they fit into existing workflows and how they can be done pragmatically.</p>
+</section>
+<section id="what-isnt-covered" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-isnt-covered"><span class="header-section-number">1.2</span> <span id="anchor-4"></span>What isn't covered</h2>
+<p>This isn't a guide on how to do machine learning itself. Although some of the sections touch upon some of these considerations, this book won't explain everything thoroughly. If you want a more gentle conceptual introduction to machine learning, we recommend <a href="https://carpentries-incubator.github.io/machine-learning-librarians-archivists/"><em>https://carpentries-incubator.github.io/machine-learning-librarians-archivists</em></a>. For a hands-on introduction, we recommended <a href="https://course.fast.ai/"><em>https://course.fast.ai/</em></a>.</p>
+</section>
+<section id="who-is-this-for" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="who-is-this-for"><span class="header-section-number">1.3</span> <span id="anchor-5"></span>Who is this for?</h2>
+<p>We hope that this book will be useful for other GLAM institutions wanting to embark on machine learning projects. In particular, we are keen to address ‘business as usual’ use cases of machine learning in GLAM institutions as we believe there is massive scope for using machine learning methods across a range of ‘mundane’ GLAM activities.</p>
+</section>
+<section id="practical-machine-learning-projects" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> <span id="anchor-6"></span>(Practical) machine learning projects</h1>
+<p>A<a href="https://www.techrepublic.com/article/why-85-of-ai-projects-fail/"></a><a href="https://www.techrepublic.com/article/why-85-of-ai-projects-fail/"><em>report</em></a> has suggested that 85% of AI projects “ultimately fail to deliver on their intended promises to business”. This stat might be a little dubious, but there is some truth to the claim that machine learning projects can be challenging. By a “machine learning project,” we mean a project that intends to use machine learning to solve a problem. Part of this process could include creating new machine learning models, but it could also rely on existing models.</p>
+<p>We use the term “practical” here to try and distinguish this type of project slightly from other projects which may involve using machine learning in a GLAM setting but are more focused on research. The outputs of these projects may need to integrate less tightly into existing business workflows and processes. This isn’t to say that these kinds of projects won’t have their own challenges, but they will likely be different. ‘Practical’ machine learning projects could include workflows and processes that end users don’t see and are likely to be the kinds of projects that may struggle to get external funding.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="doc-biblioentry">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
