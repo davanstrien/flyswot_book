@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - References</title>
+<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 2&nbsp; Defining the ‘business’ problem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -88,7 +70,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">References</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Defining the ‘business’ problem</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -123,7 +105,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./business_problem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Defining the ‘business’ problem</span></a>
+  <a href="./business_problem.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Defining the ‘business’ problem</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -133,7 +115,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
@@ -148,7 +130,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">References</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Defining the ‘business’ problem</span></h1>
 </div>
 
 
@@ -162,34 +144,26 @@ div.csl-indent {
 
 </header>
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-ameisen2020building" class="csl-entry" role="doc-biblioentry">
-Ameisen, Emmanuel. 2020. <em>Building Machine Learning Powered
-Applications: Going from Idea to Product</em>. " O’Reilly Media, Inc.".
-</div>
-<div id="ref-Darby2022AITR" class="csl-entry" role="doc-biblioentry">
-Darby, Andrew, Catherine Nicole Coleman, Claudia Engel, Daniel Alexander
-van Strien, Michael Trizna, and Zachary Painter. 2022. <span>“AI
-Training Resources for GLAM: A Snapshot.”</span> <em>ArXiv</em>
-abs/2205.04738.
-</div>
-<div id="ref-huyen2022designing" class="csl-entry" role="doc-biblioentry">
-Huyen, Chip. 2022. <em>Designing Machine Learning Systems</em>. "
-O’Reilly Media, Inc.".
-</div>
-<div id="ref-lakshmanan2020machine" class="csl-entry" role="doc-biblioentry">
-Lakshmanan, Valliappa, Sara Robinson, and Michael Munn. 2020.
-<em>Machine Learning Design Patterns</em>. O’Reilly Media.
-</div>
-<div id="ref-pmlr-v170-strien22a" class="csl-entry" role="doc-biblioentry">
-van Strien, Daniel, Mark Bell, Nora Rose McGregor, and Michael Trizna.
-2022. <span>“An Introduction to AI for GLAM.”</span> In <em>Proceedings
-of the Second Teaching Machine Learning and Artificial Intelligence
-Workshop</em>, edited by Katherine M. Kinnaird, Peter Steinbach, and
-Oliver Guhr, 170:20–24. Proceedings of Machine Learning Research. PMLR.
-<a href="https://proceedings.mlr.press/v170/strien22a.html">https://proceedings.mlr.press/v170/strien22a.html</a>.
-</div>
-</div>
+<p>The British Library has a vast amount of ‘legacy’ digitised content stored on network drives. The Heritage Made Digital (HMD) team has been tasked with making these available for users online. We have multiple terabytes of image files, mostly containing photos or scans of the items in our physical collection. One of the viewing platforms that we have made our manuscript image sets available on over the years is our<a href="https://www.bl.uk/manuscripts/Default.aspx"></a><a href="https://www.bl.uk/manuscripts/Default.aspx"><em>Digitised Manuscripts</em></a> (DM) website so that people can look at and study the digitised versions of the physical objects without needing to come into one of our buildings in St Pancras or Boston Spa.</p>
+<p>The thing is, DM was never designed to be our primary, strategic, good-for-all-occasions image viewer. It was built for a specific project that wanted to publish a limited number of similarly constructed manuscripts. Namely the <a href="https://www.bl.uk/collection-guides/greek-manuscripts">Greek Manuscripts</a> project.</p>
+<p>The physical structure of the items in the Greek Manuscripts project are largely uniform. They are bound codices (of varying sizes and material types) and to digitise these all you need to do is take a photo of the front cover, front flysheets, folios, end flysheets, back cover and spine. That’s six different types of images. Or, in terms of our standardised filenames (ignoring the r and v we put at the end of filenames for each recto and verso shot, for the sake of simplicity):</p>
+<ul>
+<li><code>fblef</code> - front cover</li>
+<li><code>fs001</code> - front flysheet</li>
+<li><code>f001</code> - folio</li>
+<li><code>fse001</code> - end flysheet</li>
+<li><code>fbrig</code> - back cover</li>
+<li><code>fbspi</code> - spine</li>
+</ul>
+<p>And so DM was built to accommodate these and only these options, with no room for something physically unusual that didn’t fit this standard.</p>
+<p>Regardless of this shortcoming, DM was pretty good, and better than anything else we had at the time, so other projects started using it to publish their manuscript material. This is where the problem arose.</p>
+<p>The material in these other projects wasn’t as uniform as the items in the Greek Manuscripts project, and sometimes we wanted to take images of fore-edges, or clasps, or bags, or anything else interesting or integral to the physical item. The only way to publish these images on DM was to assign them one of the six standard filenames, and the agreed approach was to call them an end flysheet, and give it a number at the end of the sequence. In other words, if you already have two end flysheets, the image filename of the fore-edge will be called fse003. A ‘fake’ flysheet.</p>
+<p>This worked fine for years, but we are now at the point of moving on from Digitised Manuscripts and we are beginning to migrate all our digital content into our new preservation and access system, allowing people to view and download images from our IIIF-compatible viewer, the <a href="https://blogs.bl.uk/digital-scholarship/2016/12/new-viewer-digitised-collections-british-library.html">Universal Viewer</a>.</p>
+<p>This new system allows us to display whatever images we want, in any sequence order, and label them however we want, regardless of the filename. This gives us an opportunity to correctly relabel images that were published to DM as ‘fake’ flysheets, so that users can better understand the digital objects we’re presenting to them.</p>
+<p>Unfortunately, however, we kept little to no records of which images we renamed as ‘fake’ flysheets. There are potentially hundreds or thousands of these scattered throughout the tens of thousands of items we’ve digitised. Rather than manually checking every image as we migrate it to the new system we thought it might be more efficient and sustainable to use an automated or semi-automated computational method to do this task, or at least get one to help us to do it.</p>
+<p>It’s worth saying that even though we may have initially dreamed of a magic program to solve all our problems - identifying all our ‘fake’ flysheets with a click of a button and relabelling them for us - we very quickly downgraded our expectations. The main reason we couldn’t put our faith in a totally automated solution is because we know our collection (or at least we know how physically varied it can be), how big it is, and how we don’t really know everything about it. Given the myriad of items we’ve digitised over the last 20+ years, we were pretty sure a tool wouldn’t be able to pick out all the subtle differences in images with 100% accuracy - a task even trained humans find difficult to do. This turned out to be a fairly sensible assumption and what we actually needed was a tool that could be used as part of our existing migration workflow, confirming the large majority of images as real flysheets whilst flagging up images it suspected were fakes, for a human to then manually confirm or deny by looking at the image.</p>
+<p>So the task became one to create a tool as quickly and easily as possible, that was simple to use and maintain, that fit into our existing workflow, gave us accurate results, and we felt confident enough to trust. Because we lacked the required software development skills within the team, we turned to colleagues with expertise in machine learning and set up a meeting to outline our requirements; so the concept for flyswot was born.</p>
+<p>A bonus to this whole approach was that we could work more closely with colleagues we don’t necessarily engage with on a day-to-day basis. It also brought a subset of our team closer together in pursuit of a new extracurricular activity, and we’d all be able to learn about new tools and technologies.</p>
 
 
 
@@ -294,11 +268,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./summary.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      <a href="./intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
