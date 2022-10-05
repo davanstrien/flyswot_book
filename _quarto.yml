@@ -10,10 +10,11 @@ book:
     - Francisco Perez-Garcia
     - Adelaida Ngowi
     - Kate Thomas
-  date: "13/09/2022"
+  date: "today"
   chapters:
     - index.qmd
     - intro.qmd
+    - business_problem.qmd
     - summary.qmd
     - references.qmd
 
@@ -22,7 +23,7 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-#   pdf:
+  #pdf:
 #     documentclass: scrreprt
 
 execute:
