@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "flyswot_book"
+  title: "How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow"
   author:
     - Daniel van Strien
     - Catherine Cronin
