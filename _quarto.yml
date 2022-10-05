@@ -3,7 +3,11 @@ project:
 
 book:
   title: "flyswot_book"
-  author: "Jane Doe"
+  author:
+    - Daniel van Strien
+    - Catherine Cronin
+    - Andrew Longworth
+    - HMD team names?
   date: "13/09/2022"
   chapters:
     - index.qmd
