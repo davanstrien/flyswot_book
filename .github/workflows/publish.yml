@@ -12,6 +12,7 @@ jobs:
       contents: write
     steps:
       - run: |
+          sudo apt update 
           sudo apt-get install texlive-latex-extra
       - name: Check out repository
         uses: actions/checkout@v2
