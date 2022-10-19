@@ -101,8 +101,7 @@ learning methods across a range of 'mundane' GLAM activities.
 
 ## Practical machine learning projects?
 
-A report
-has suggested that 85% of AI projects "ultimately fail to deliver on
+A report has suggested that 85% of AI projects "ultimately fail to deliver on
 their intended promises to business"[^report]. This stat might be a little
 dubious, but there is some truth to the claim that machine learning
 projects can be challenging. By a "machine learning project," we mean a
