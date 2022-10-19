@@ -88,7 +88,7 @@ understand the digital objects we're presenting to them.
 
 ::: {#fig-manuscript layout-ncol=1}
 
-![Digitsed manuscript platform showing page types being derived from the filename](assets/or_8816.png){#fig-manuscript}
+![Digitsed manuscript platform showing page types being derived from the filename](assets/or_8816.webp){#fig-manuscript}
 
 Digitised manuscripts platform with pages types
 :::
