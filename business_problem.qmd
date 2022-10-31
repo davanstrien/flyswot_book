@@ -14,7 +14,9 @@ However, if we want to use machine learning to help us with a particular 'practi
 We'll come back to assessing our model performance in more detail later. However, to know what performance is acceptable we need to have a good grasp of what our actual business problem is -- what are the things we're trying to achieve and how does this fit into existing or new workflows? If this is ill-defined it will be difficult to assess whether we've been successful or not. 
 
 :::{.callout-note}
-If you have had some exposure to machine learning you may be thinking that we already have an obvious way of evaluating if a model is doing well or not: use some kind of metric such as accuracy or precision. However, this metric may be useful as a **proxy** for evaluating the success of your approach. However, which metrics you prioritise and the levels these metrics should reach will depend a lot on your broader 'business goal'. 
+If you have had some exposure to machine learning you may be thinking that we already have an obvious way of evaluating if a model is doing well or not: use some kind of metric such as accuracy or precision.
+
+However, whilst this metric may be useful as a **proxy** for evaluating the success of your approach. However, which metrics you prioritise and the levels these metrics should reach will depend a lot on your broader 'business goal'. 
 :::
 
 
