@@ -15,7 +15,6 @@ book:
     - index.qmd
     - intro.qmd
     - business_problem.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib
