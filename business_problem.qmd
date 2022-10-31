@@ -1,6 +1,5 @@
 
-
-# Defining the 'business problem'
+# Approaching ML projects
 
 One of the first things we may want to do when doing an machine learning project is to ensure we have defined what we are trying to achieve. Often this can be framed around a 'business problem'. We put both of these in scare quotes because if we work in a GLAM institution we may not consider ourselves a 'business'. We may also not be tackling a 'problem' as much as we're hoping to machine learning to do something new. However, being clear about what the outcome is may be particularly important when we're trying to use machine learning for more practical tasks. 
 
