@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 3&nbsp; Approaching ML projects</title>
+<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 3&nbsp; Approaching ML projects: defining the ‘problem’</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
+<link href="./references.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects: defining the ‘problem’</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -105,12 +105,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./business_problem.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./business_problem.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects: defining the ‘problem’</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,7 +122,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#defining-the-business-problem" id="toc-defining-the-business-problem" class="nav-link active" data-scroll-target="#defining-the-business-problem"><span class="toc-section-number">4</span>  Defining the ‘business problem’</a>
+  <li><a href="#do-you-need-machine-learning-at-all" id="toc-do-you-need-machine-learning-at-all" class="nav-link active" data-scroll-target="#do-you-need-machine-learning-at-all"><span class="toc-section-number">3.1</span>  Do you need machine learning at all?</a></li>
+  <li><a href="#defining-the-business-problem" id="toc-defining-the-business-problem" class="nav-link" data-scroll-target="#defining-the-business-problem"><span class="toc-section-number">4</span>  Defining the ‘business problem’</a>
   <ul class="collapse">
   <li><a href="#defining-the-business-problem-for-hertiage-made-digital" id="toc-defining-the-business-problem-for-hertiage-made-digital" class="nav-link" data-scroll-target="#defining-the-business-problem-for-hertiage-made-digital"><span class="toc-section-number">4.1</span>  Defining the ‘business’ problem for Hertiage Made Digital</a></li>
   </ul></li>
@@ -139,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects: defining the ‘problem’</span></h1>
 </div>
 
 
@@ -153,17 +149,41 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>One of the first things we may want to do when doing an machine learning project is to ensure we have defined what we are trying to achieve. Often this can be framed around a ‘business problem’. We put both of these in scare quotes because if we work in a GLAM institution we may not consider ourselves a ‘business’. We may also not be tackling a ‘problem’ as much as we’re hoping to machine learning to do something new. However, being clear about what the outcome is may be particularly important when we’re trying to use machine learning for more practical tasks.</p>
-<p>If our goal is to produce a paper or do some exploraty assesment of what machine learning may enable us to do we may have more vague sucess criteria. We may, for example, be happy to apply some pre-trained models to some of our data and asess the performance of that model on our data. This asssment may be done manually i.e.&nbsp;look at a few example results some ‘off-the-shelf’ machine learning models produce for our data. It could also be a more robust assesment of model performance on an evaluation dataset. For example, we may apply a Named entity Recognitoin model to some data we’ve annotated and see how well the model performs.</p>
-<ul>
-<li>ML projects vs other projets</li>
-<li>benchmarks</li>
-</ul>
+<p>How should we approach machine learning projects and how might this differ from other kinds of projects?</p>
+<p>One of the first things we probably want to do when doing a machine learning project is to ensure we have defined what we are trying to achieve. Often this can be framed around a ‘business problem’. We put both of these in scare quotes because if we work in a GLAM institution we may not consider ourselves a ‘business’. We may also not be tackling a ‘problem’ as much as we’re hoping to machine learning to do something new. However, being clear about what the outcome is may be particularly important when we’re trying to use machine learning for more practical tasks.</p>
+<p>If our goal is to produce a paper or do some exploratory assessment of what machine learning may enable us to do we may have more vague success criteria. We may, for example, be happy to apply some pre-trained models to some of our data and assess the performance of that model on our data. This assessment may be done manually i.e.&nbsp;look at a few example results some ‘off-the-shelf’ machine learning models produce for our data. It could also be a more robust assessment of model performance on an evaluation dataset. For example, we may apply a Named Entity Recognition model to some data we’ve annotated and see how well the model performs.</p>
+<p>However, if we want to use machine learning to help us with a particular ‘practical’ process, we should try and be quite clear about what the issue is and what success would look like. This will be important when we come to assess whether any machine learning models we create – and the way in which we use these models is useful.</p>
 <!-- add link here to future section below-->
-<p>We’ll come back to assessing our model performance in more detail later. However, in order to know what performance is acceptable we need to have a good grasp of what our actual business problem is – what is the things we’re trying to achieve and how does this fit into existing or new workflows? If this is ill-defined it will be difficult to later on assess whether we’ve been sucesful or not.</p>
+<p>We’ll come back to assessing our model performance in more detail later. However, to know what performance is acceptable we need to have a good grasp of what our actual business problem is – what are the things we’re trying to achieve and how does this fit into existing or new workflows? If this is ill-defined it will be difficult to assess whether we’ve been successful or not.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have had some exposure to machine learning you may be thinking that we already have an obvious way of evaluating if a model is doing well or not: use some kind of metric such as accuracy or precision. However, this metric may be useful as a <strong>proxy</strong> for evaluating the success of your approach. However, which metrics you prioritise and the levels these metrics should reach will depend a lot on your broader ‘business goal’.</p>
+</div>
+</div>
+<section id="do-you-need-machine-learning-at-all" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="do-you-need-machine-learning-at-all"><span class="header-section-number">3.1</span> Do you need machine learning at all?</h2>
+<p>Once you have decided what problem you are trying to tackle you should also step back and ask whether machine learning is the only – or best – answer. Some other options that may make more sense:</p>
+<ul>
+<li>do the task manually</li>
+<li>do the task manually as part of an internal effort</li>
+<li>do the task through public facing crowdsourcing</li>
+<li>do the task in a computational way <em>without</em> machine learning</li>
+<li>don’t do the task at all</li>
+</ul>
+<p>Whilst machine learning can be a very powerful tool, machine learning projects are usually not ‘quick’ or ‘easy’ wins.</p>
+<p>If you have an existing process you are trying to integrate machine learning into you can use this existing approach as a comparison to any new approaches developed. This can be very useful for assessing the extent to which machine learning is practical in the setting you are using it.</p>
+</section>
 <section id="defining-the-business-problem" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Defining the ‘business problem’</h1>
-<p>One of the first things we may want to do when doing an machine learning project is to ensure we have defined what we are trying to achieve. Often this can be framed around a ‘business problem’. We put both of these in scare quotes because if we work in a GLAM institution we may not consider ourselves a ‘business’. We may also not be tackling a ‘problem’ as much as we’re hoping to machine learning to do something new. However, being clear about what the outcome is may be particularly important when we’re trying to use machine learning for more practical tasks.</p>
+<p>One of the first things we may want to do when doing a machine learning project is to ensure we have defined what we are trying to achieve. Often this can be framed around a ‘business problem’. We put both of these in scare quotes because if we work in a GLAM institution we may not consider ourselves a ‘business’. We may also not be tackling a ‘problem’ as much as we’re hoping to machine learning to do something new. However, being clear about what the outcome is may be particularly important when we’re trying to use machine learning for more practical tasks.</p>
 <p>If our goal is to produce a paper or do some exploraty assesment of what machine learning may enable us to do we may have more vague sucess criteria. We may, for example, be happy to apply some pre-trained models to some of our data and asess the performance of that model on our data. This asssment may be done manually i.e.&nbsp;look at a few example results some ‘off-the-shelf’ machine learning models produce for our data. It could also be a more robust assesment of model performance on an evaluation dataset. For example, we may apply a Named entity Recognitoin model to some data we’ve annotated and see how well the model performs.</p>
 <ul>
 <li>ML projects vs other projets</li>
@@ -334,8 +354,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
