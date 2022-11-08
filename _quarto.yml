@@ -16,12 +16,13 @@ book:
     - intro.qmd
     - business_problem.qmd
     - references.qmd
-
+  twitter-card: true
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
+
   #pdf:
 #     documentclass: scrreprt
 
