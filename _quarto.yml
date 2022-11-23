@@ -15,7 +15,7 @@ book:
     - index.qmd
     - intro.qmd
     - business_problem.qmd
-    - creating-training-data.qmd
+    - creating-training-data-annotation.qmd
     - references.qmd
   twitter-card: true
 bibliography: references.bib
