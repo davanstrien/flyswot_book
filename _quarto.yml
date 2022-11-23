@@ -21,6 +21,7 @@ book:
       chapters:
         - creating-training-data-annotation.qmd
         - creating-training-data-continued.qmd
+        - a_note_on_notebooks.qmd
     # - part: "Training models"
     #   chapters:
     #     - 00_baseline_dummy.ipynb

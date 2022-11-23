@@ -1,0 +1,10 @@
+# A note on notebooks
+
+The next chapter is the first of a series of chapters that are generated from [Jupyter Notebooks](https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook).
+
+Jupyter Notebooks are a programming environment that allows you to combine code, prose, and output images in a single document. This can make a notebook a powerful tool for communicating with others. 
+
+![A Screenshot of a Jupyter Notebook](assets/notebook.webp){fig-align="right" fig-alt="A screenshot of a Jupyter Notebook."}
+
+Sometimes notebooks are created to allow others to rerun the notebook and get the same results. This is not our goal here. Instead, we share these notebooks largely to illustrate our approach at a particular point in time and as a way of discussing some important concepts. 
+
