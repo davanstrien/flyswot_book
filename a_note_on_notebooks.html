@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 5&nbsp; Creating training data: other considerations</title>
+<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 6&nbsp; A note on notebooks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./a_note_on_notebooks.html" rel="next">
-<link href="./creating-training-data-annotation.html" rel="prev">
+<link href="./creating-training-data-continued.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,8 +61,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 5&nbsp; Creating training data: other considerations">
-<meta name="twitter:description" content="In the previous chapter, we discussed different routes to annotating our data and the approach we ended up taking.">
+<meta name="twitter:title" content="How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 6&nbsp; A note on notebooks">
+<meta name="twitter:description" content="The next chapter is the first of a series of chapters that are generated from Jupyter Notebooks.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -73,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">A note on notebooks</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -136,12 +135,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-training-data-continued.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></a>
+  <a href="./creating-training-data-continued.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./a_note_on_notebooks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">A note on notebooks</span></a>
+  <a href="./a_note_on_notebooks.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">A note on notebooks</span></a>
   </div>
 </li>
       </ul>
@@ -151,23 +150,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#finding-existing-datasets" id="toc-finding-existing-datasets" class="nav-link active" data-scroll-target="#finding-existing-datasets"><span class="toc-section-number">5.0.1</span>  Finding existing datasets?</a></li>
-  <li><a href="#how-much-data-do-we-need" id="toc-how-much-data-do-we-need" class="nav-link" data-scroll-target="#how-much-data-do-we-need"><span class="toc-section-number">5.0.2</span>  How much data do we need?</a></li>
-  <li><a href="#data-tools" id="toc-data-tools" class="nav-link" data-scroll-target="#data-tools"><span class="toc-section-number">5.0.3</span>  Data tools</a></li>
-  <li><a href="#how-to-ensure-were-using-our-annotated-data-carefully" id="toc-how-to-ensure-were-using-our-annotated-data-carefully" class="nav-link" data-scroll-target="#how-to-ensure-were-using-our-annotated-data-carefully"><span class="toc-section-number">5.0.4</span>  How to ensure we’re using our annotated data carefully?</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">A note on notebooks</span></h1>
 </div>
 
 
@@ -182,30 +172,17 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In the previous chapter, we discussed different routes to annotating our data and the approach we ended up taking. This section will briefly discuss other data aspects we found necessary to consider as part of our project.</p>
-<section id="finding-existing-datasets" class="level3" data-number="5.0.1">
-<h3 data-number="5.0.1" class="anchored" data-anchor-id="finding-existing-datasets"><span class="header-section-number">5.0.1</span> Finding existing datasets?</h3>
-<p>One reasonable question you may have had whilst reading the previous chapter is: why not use some existing data? Unfortunately, we often won’t find a prepared dataset ready for use. In some forthcoming ‘bonus’ chapters, we’ll discuss ways in which you could leverage the wealth of unlabeled data created by GLAM institutions. However, this is a more advanced topic we explored later in our project, so we won’t cover it here.</p>
-<p>With the growing interest in using machine learning in GLAMs, there are an increasing number of datasets you might be able to use as a starting point. Good places to look for these datasets include:</p>
-<ul>
-<li><a href="https://huggingface.co/datasets">Hugging Face datasets hub</a> (in particular, the <a href="https://huggingface.co/biglam">BigLAM</a> organization is explicitly trying to make more GLAM data available;e for machine learning.</li>
-<li><a href="https://zenodo.org/">Zenodo</a></li>
-</ul>
-</section>
-<section id="how-much-data-do-we-need" class="level3" data-number="5.0.2">
-<h3 data-number="5.0.2" class="anchored" data-anchor-id="how-much-data-do-we-need"><span class="header-section-number">5.0.2</span> How much data do we need?</h3>
-<p>TODO</p>
-</section>
-<section id="data-tools" class="level3" data-number="5.0.3">
-<h3 data-number="5.0.3" class="anchored" data-anchor-id="data-tools"><span class="header-section-number">5.0.3</span> Data tools</h3>
-<p>TODO</p>
-</section>
-<section id="how-to-ensure-were-using-our-annotated-data-carefully" class="level3" data-number="5.0.4">
-<h3 data-number="5.0.4" class="anchored" data-anchor-id="how-to-ensure-were-using-our-annotated-data-carefully"><span class="header-section-number">5.0.4</span> How to ensure we’re using our annotated data carefully?</h3>
-<p>Whilst creating our annotated data is one important step in a machine learning project we have to consider how to use this data carefully. The next chapter will discuss some of these considerations in a little more detail.</p>
+<p>The next chapter is the first of a series of chapters that are generated from <a href="https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook">Jupyter Notebooks</a>.</p>
+<p>Jupyter Notebooks are a programming environment that allows you to combine code, prose, and output images in a single document. This can make a notebook a powerful tool for communicating with others.</p>
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure">
+<p><img src="assets/notebook.webp" class="img-fluid figure-img" alt="A screenshot of a Jupyter Notebook."></p>
+<p></p><figcaption class="figure-caption">A Screenshot of a Jupyter Notebook</figcaption><p></p>
+</figure>
+</div>
+<p>Sometimes notebooks are created to allow others to rerun the notebook and get the same results. This is not our goal here. Instead, we share these notebooks largely to illustrate our approach at a particular point in time and as a way of discussing some important concepts.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -343,14 +320,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./creating-training-data-annotation.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating training data: annotation</span></span>
+      <a href="./creating-training-data-continued.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./a_note_on_notebooks.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">A note on notebooks</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
