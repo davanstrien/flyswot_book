@@ -1,0 +1,23 @@
+
+## Creating training data: other considerations
+
+In the previous chapter, we discussed different routes to annotating our data and the approach we ended up taking. This section will briefly discuss other data aspects we found necessary to consider as part of our project. 
+
+### Finding existing datasets?
+
+One reasonable question you may have had whilst reading the previous chapter is: why not use some existing data? Unfortunately, we often won't find a prepared dataset ready for use. In some forthcoming 'bonus' chapters, we'll discuss ways in which you could leverage the wealth of unlabeled data created by GLAM institutions. However, this is a more advanced topic we explored later in our project, so we won't cover it here. 
+
+With the growing interest in using machine learning in GLAMs, there are an increasing number of datasets you might be able to use as a starting point. Good places to look for these datasets include:
+
+- [Hugging Face datasets hub](https://huggingface.co/datasets) (in particular, the [BigLAM](https://huggingface.co/biglam) organization is explicitly trying to make more GLAM data available;e for machine learning. 
+- [Zenodo](https://zenodo.org/)
+
+
+### Data tools
+
+TODO
+
+
+### How to ensure we're using our annotated data carefully?
+
+Whilst creating our annotated data is one important step in a machine learning project we have to consider how to use this data carefully. The next chapter will discuss some of these considerations in a little more detail. 

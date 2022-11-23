@@ -12,14 +12,26 @@ book:
     - Kate Thomas
   date: "today"
   chapters:
-    - index.qmd
-    - intro.qmd
-    - business_problem.qmd
-    - creating-training-data-annotation.qmd
-    - references.qmd
-  twitter-card: true
-bibliography: references.bib
+    - part: "Introduction"
+      chapters:
+        - index.qmd
+        - intro.qmd
+        - business_problem.qmd
+    - part: data.qmd
+      chapters:
+        - creating-training-data-annotation.qmd
+        - creating-training-data-continued.qmd
+    # - part: "Training models"
+    #   chapters:
+    #     - 00_baseline_dummy.ipynb
+    #     - 02_cnn_baseline.ipynb
+    # - part: "Appendices"
+    #   chapters:
+    #     - 05_onnx_conversion.ipynb
+    #     - references.qmd
 
+bibliography: references.bib
+twitter-card: true
 format:
   html:
     theme: cosmo
@@ -28,4 +40,6 @@ format:
 #     documentclass: scrreprt
 
 execute:
-  freeze: auto
+  freeze: true
+
+csl: chicago-note-bibliography.csl

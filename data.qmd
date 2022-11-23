@@ -1,0 +1,9 @@
+# Data
+
+This next section deals with data. Whilst data has been recognised as a vital component of machine learning it hasn't always been given the same attention as other parts of the pipeline. Recently a greater emphasis has been given to data. 
+
+We only scratch the surface of some of the issues related to data. We focus in particular on:
+
+- annotating our data
+- using data for evaluation
+
