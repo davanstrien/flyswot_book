@@ -115,31 +115,51 @@ div.csl-indent {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introduction</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./business_problem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects: defining the ‘problem’</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./data.html" class="sidebar-item-text sidebar-link">Data</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./creating-training-data-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating training data: annotation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./creating-training-data-continued.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -186,14 +206,14 @@ div.csl-indent {
 </li>
 <li>Academic projects often have different goals than ‘business as usual’ projects. For academic projects, publishing in well-respected journals remains the primary goal. For BAU projects the outcome is to ‘solve’ a problem. Whilst these can intersect, there can be tensions between the two. For example, an academic publication might be achieved by improving performance on a benchmark dataset at the expense of using a much larger model, whilst the BAU use case might have constraints on what resources can be used for training/inference (a topic we pick up later in this book).</li>
 </ul>
-<p>There is also a growing body of materials focused on teaching GLAM staff topics related to machine learning. A review of some of this material has been carried out by the Teaching and Learning working group of the AI4LAM network <span class="citation" data-cites="Darby2022AITR">Darby et al. (<a href="references.html#ref-Darby2022AITR" role="doc-biblioref">2022</a>)</span>.</p>
-<p>This material includes general introductions to machine learning for GLAM staff <span class="citation" data-cites="pmlr-v170-strien22a">van Strien et al. (<a href="references.html#ref-pmlr-v170-strien22a" role="doc-biblioref">2022</a>)</span>, practical introductions to using the Python programming language for machine learning <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and introductions to a specific tool. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>There is also a growing body of materials focused on teaching GLAM staff topics related to machine learning. A review of some of this material has been carried out by the Teaching and Learning working group of the AI4LAM network <span class="citation" data-cites="Darby2022AITR">Darby et al.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></span></p>
+<p>This material includes general introductions to machine learning for GLAM staff <span class="citation" data-cites="pmlr-v170-strien22a">van Strien et al.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></span>, practical introductions to using the Python programming language for machine learning <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and introductions to a specific tool. <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <p>While this more ‘formal’ teaching material is an essential part of enabling GLAM staff to engage with machine learning, there are limitations to relying only on this material. These materials often need to focus on a particular topic, concept or approach within machine learning, for example, an introduction to <a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named Entity Recognition</a>. However, learning how to train a machine learning model, or use an existing model, is only one part of a more extensive pipeline for practically making use of machine learning in a GLAM setting.</p>
 <section id="whats-missing" class="level3" data-number="2.0.1">
 <h3 data-number="2.0.1" class="anchored" data-anchor-id="whats-missing"><span class="header-section-number">2.0.1</span> What’s missing?</h3>
 <p><img src="assets/ml-workflow.png" class="img-fluid"></p>
-<p>A recent review of teaching materials <span class="citation" data-cites="Darby2022AITR">Darby et al. (<a href="references.html#ref-Darby2022AITR" role="doc-biblioref">2022</a>)</span> for GLAM staff identified that much of the existing material was focused on one stage of the machine learning pipeline, namely the ‘creating and training a model’ part of the process. Whilst this is an important component of applying machine learning, many other stages of the process - particularly when seeking to use machine learning in a ‘practical’ setting - are important.</p>
-<p>There has been a growing number of books published in recent years that aim to cover more of the end-to-end pipeline of machine learning products <span class="citation" data-cites="ameisen2020building">Ameisen (<a href="references.html#ref-ameisen2020building" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="huyen2022designing">Huyen (<a href="references.html#ref-huyen2022designing" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="lakshmanan2020machine">Lakshmanan, Robinson, and Munn (<a href="references.html#ref-lakshmanan2020machine" role="doc-biblioref">2020</a>)</span>. Alongside this, there has also been the development of courses like ‘Full Stack Deep Learning’<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and ‘Made with ML’<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> which go beyond the model training components of machine learning projects. These resources are very useful but some of the approaches adopted in these settings may not translate to the GLAM sector.</p>
+<p>A recent review of teaching materials <span class="citation" data-cites="Darby2022AITR">Darby et al.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></span> for GLAM staff identified that much of the existing material was focused on one stage of the machine learning pipeline, namely the ‘creating and training a model’ part of the process. Whilst this is an important component of applying machine learning, many other stages of the process - particularly when seeking to use machine learning in a ‘practical’ setting - are important.</p>
+<p>There has been a growing number of books published in recent years that aim to cover more of the end-to-end pipeline of machine learning products <span class="citation" data-cites="ameisen2020building">Ameisen<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></span>, <span class="citation" data-cites="huyen2022designing">Huyen<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></span>, <span class="citation" data-cites="lakshmanan2020machine">Lakshmanan, Robinson, and Munn<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></span>. Alongside this, there has also been the development of courses like ‘Full Stack Deep Learning’<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> and ‘Made with ML’<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> which go beyond the model training components of machine learning projects. These resources are very useful but some of the approaches adopted in these settings may not translate to the GLAM sector.</p>
 <p>This book aims to partially fill the gap of open documentation about a machine learning project undertaken in a GLAM institution (The British Library). It is not intended as a guide to best practice but instead offers an outline of the approach we took with the hope that anyone wanting to embark on a machine learning project in a GLAM setting can learn from our experiences.</p>
 </section>
 <section id="whats-covered" class="level2" data-number="2.1">
@@ -224,36 +244,42 @@ div.csl-indent {
 </section>
 <section id="practical-machine-learning-projects" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="practical-machine-learning-projects"><span class="header-section-number">2.4</span> Practical machine learning projects?</h2>
-<p>A report has suggested that 85% of AI projects “ultimately fail to deliver on their intended promises to business”<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. This stat might be a little dubious, but there is some truth to the claim that machine learning projects can be challenging. By a “machine learning project,” we mean a project that intends to use machine learning to solve a problem. Part of this process could include creating new machine learning models, but it could also rely on existing models.</p>
+<p>A report has suggested that 85% of AI projects “ultimately fail to deliver on their intended promises to business”<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>. This stat might be a little dubious, but there is some truth to the claim that machine learning projects can be challenging. By a “machine learning project,” we mean a project that intends to use machine learning to solve a problem. Part of this process could include creating new machine learning models, but it could also rely on existing models.</p>
 <p>We use the term “practical” here to try and distinguish this type of project slightly from other projects which may involve using machine learning in a GLAM setting but are more focused on research. The outputs of these projects may need to integrate less tightly into existing business workflows and processes. This isn’t to say that these kinds of projects won’t have their own challenges, but they will likely be different. ‘Practical’ machine learning projects could include workflows and processes that end users don’t see and are likely to be the kinds of projects that may struggle to get external funding.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-ameisen2020building" class="csl-entry" role="doc-biblioentry">
-Ameisen, Emmanuel. 2020. <em>Building Machine Learning Powered Applications: Going from Idea to Product</em>. " O’Reilly Media, Inc.".
+Ameisen, Emmanuel. <em>Building Machine Learning Powered Applications: Going from Idea to Product</em>. " O’Reilly Media, Inc.", 2020.
 </div>
 <div id="ref-Darby2022AITR" class="csl-entry" role="doc-biblioentry">
-Darby, Andrew, Catherine Nicole Coleman, Claudia Engel, Daniel Alexander van Strien, Michael Trizna, and Zachary Painter. 2022. <span>“AI Training Resources for GLAM: A Snapshot.”</span> <em>ArXiv</em> abs/2205.04738.
+Darby, Andrew, Catherine Nicole Coleman, Claudia Engel, Daniel Alexander van Strien, Michael Trizna, and Zachary Painter. <span>“AI Training Resources for GLAM: A Snapshot.”</span> <em>ArXiv</em> abs/2205.04738 (2022).
 </div>
 <div id="ref-huyen2022designing" class="csl-entry" role="doc-biblioentry">
-Huyen, Chip. 2022. <em>Designing Machine Learning Systems</em>. " O’Reilly Media, Inc.".
+Huyen, Chip. <em>Designing Machine Learning Systems</em>. " O’Reilly Media, Inc.", 2022.
 </div>
 <div id="ref-lakshmanan2020machine" class="csl-entry" role="doc-biblioentry">
-Lakshmanan, Valliappa, Sara Robinson, and Michael Munn. 2020. <em>Machine Learning Design Patterns</em>. O’Reilly Media.
+Lakshmanan, Valliappa, Sara Robinson, and Michael Munn. <em>Machine Learning Design Patterns</em>. O’Reilly Media, 2020.
 </div>
 <div id="ref-pmlr-v170-strien22a" class="csl-entry" role="doc-biblioentry">
-van Strien, Daniel, Mark Bell, Nora Rose McGregor, and Michael Trizna. 2022. <span>“An Introduction to AI for GLAM.”</span> In <em>Proceedings of the Second Teaching Machine Learning and Artificial Intelligence Workshop</em>, edited by Katherine M. Kinnaird, Peter Steinbach, and Oliver Guhr, 170:20–24. Proceedings of Machine Learning Research. PMLR. <a href="https://proceedings.mlr.press/v170/strien22a.html">https://proceedings.mlr.press/v170/strien22a.html</a>.
+van Strien, Daniel, Mark Bell, Nora Rose McGregor, and Michael Trizna. <span>“An Introduction to AI for GLAM.”</span> In <em>Proceedings of the Second Teaching Machine Learning and Artificial Intelligence Workshop</em>, edited by Katherine M. Kinnaird, Peter Steinbach, and Oliver Guhr, 170:20–24. Proceedings of Machine Learning Research. PMLR, 2022. <a href="https://proceedings.mlr.press/v170/strien22a.html">https://proceedings.mlr.press/v170/strien22a.html</a>.
 </div>
 </div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p><a href="https://github.com/sul-cidr/Workshops/tree/master/Intro_to_ML_with_Python">https://github.com/sul-cidr/Workshops/tree/master/Intro_to_ML_with_Python</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://github.com/NatLibFi/Annif-tutorial">https://github.com/NatLibFi/Annif-tutorial</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a href="https://fullstackdeeplearning.com/course/">https://fullstackdeeplearning.com/course/</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p><a href="">https://madewithml.com/</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p><a href="">https://www.techrepublic.com/article/why-85-of-ai-projects-fail/</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><a href="#ref-Darby2022AITR" role="doc-biblioref"><span>“AI Training Resources for GLAM”</span></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="#ref-pmlr-v170-strien22a" role="doc-biblioref"><span>“An Introduction to AI for GLAM”</span></a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://github.com/sul-cidr/Workshops/tree/master/Intro_to_ML_with_Python">https://github.com/sul-cidr/Workshops/tree/master/Intro_to_ML_with_Python</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="https://github.com/NatLibFi/Annif-tutorial">https://github.com/NatLibFi/Annif-tutorial</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><a href="#ref-Darby2022AITR" role="doc-biblioref"><span>“AI Training Resources for GLAM”</span></a>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><a href="#ref-ameisen2020building" role="doc-biblioref"><em>Building Machine Learning Powered Applications</em></a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p><a href="#ref-huyen2022designing" role="doc-biblioref"><em>Designing Machine Learning Systems</em></a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p><a href="#ref-lakshmanan2020machine" role="doc-biblioref"><em>Machine Learning Design Patterns</em></a>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p><a href="https://fullstackdeeplearning.com/course/">https://fullstackdeeplearning.com/course/</a><a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p><a href="">https://madewithml.com/</a><a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p><a href="">https://www.techrepublic.com/article/why-85-of-ai-projects-fail/</a><a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

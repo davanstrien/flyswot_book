@@ -6,15 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Daniel van Strien">
-<meta name="author" content="Catherine Cronin">
-<meta name="author" content="Andrew Longworth">
-<meta name="author" content="Francisco Perez-Garcia">
-<meta name="author" content="Adelaida Ngowi">
-<meta name="author" content="Kate Thomas">
-<meta name="dcterms.date" content="2022-11-23">
 
-<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow</title>
+<title>How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 5&nbsp; Creating training data: other considerations</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./creating-training-data-annotation.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,8 +61,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow">
-<meta name="twitter:description" content="In 1979, two Swedish bands released albums.">
+<meta name="twitter:title" content="How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow - 5&nbsp; Creating training data: other considerations">
+<meta name="twitter:description" content="In the previous chapter, we discussed different routes to annotating our data and the approach we ended up taking.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -79,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -112,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -142,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./creating-training-data-continued.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></a>
+  <a href="./creating-training-data-continued.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></a>
   </div>
 </li>
       </ul>
@@ -156,7 +149,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface"><span class="toc-section-number">1</span>  Preface</a></li>
+  <li><a href="#finding-existing-datasets" id="toc-finding-existing-datasets" class="nav-link active" data-scroll-target="#finding-existing-datasets"><span class="toc-section-number">5.0.1</span>  Finding existing datasets?</a></li>
+  <li><a href="#data-tools" id="toc-data-tools" class="nav-link" data-scroll-target="#data-tools"><span class="toc-section-number">5.0.2</span>  Data tools</a></li>
+  <li><a href="#how-to-ensure-were-using-our-annotated-data-carefully" id="toc-how-to-ensure-were-using-our-annotated-data-carefully" class="nav-link" data-scroll-target="#how-to-ensure-were-using-our-annotated-data-carefully"><span class="toc-section-number">5.0.3</span>  How to ensure we’re using our annotated data carefully?</a></li>
   </ul>
 </nav>
     </div>
@@ -165,31 +160,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">How we built a Pragmatic Machine Learning Pipeline to Identify Fake Flysheets as part of a Library Workflow</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Daniel van Strien </p>
-             <p>Catherine Cronin </p>
-             <p>Andrew Longworth </p>
-             <p>Francisco Perez-Garcia </p>
-             <p>Adelaida Ngowi </p>
-             <p>Kate Thomas </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 23, 2022</p>
-    </div>
-  </div>
   
     
   </div>
@@ -197,12 +175,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preface" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Preface</h1>
-<p>In 1979, two Swedish bands released albums. One of these albums, <em>Voulez-Vous, </em>was recorded by ABBA in Polar Studios, at its time, one of the most advanced — and expensive — recording studios in the world. The other album, <em>We're Only in it for the Drugs, </em>by the Swedish Punk band <a href="https://en.wikipedia.org/wiki/Ebba_Grön">Ebba Grön</a> was recorded on a mobile 8-channel mixer in a closed industrial office. Both these albums are great, but the resources available to create them were vastly different.</p>
-<p>There is a prevalent perception that machine learning is only for those with deep pockets. For example, in 2022, Google created a new Language Model, PaLM, but the cost of training such a model is estimated to be between $9M to $23M. As a result, discussions of machine learning often focus on large tech companies because they are deemed to be the only ones with the finances to develop and use this technology.</p>
-<p>Machine learning, and in particular a branch of machine learning called deep learning, has dramatically impacted a range of domains over the past ten years. There has been a growing interest in using machine learning in gallery, library, archive and museum (GLAM) institutions. A barrier to further adoption of machine learning in the GLAM sector is the perception that it requires extensive technical skill, data, computing power and other resources.</p>
-<p>In this book, we want to show that just as <a href="https://en.wikipedia.org/wiki/Ebba_Grön"><em>Ebba Grön</em></a> was able to record a seminal album without the resources available to ABBA, GLAM institutions can use machine learning for practical work without the resources of Google.</p>
+<p>In the previous chapter, we discussed different routes to annotating our data and the approach we ended up taking. This section will briefly discuss other data aspects we found necessary to consider as part of our project.</p>
+<section id="finding-existing-datasets" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="finding-existing-datasets"><span class="header-section-number">5.0.1</span> Finding existing datasets?</h3>
+<p>One reasonable question you may have had whilst reading the previous chapter is: why not use some existing data? Unfortunately, we often won’t find a prepared dataset ready for use. In some forthcoming ‘bonus’ chapters, we’ll discuss ways in which you could leverage the wealth of unlabeled data created by GLAM institutions. However, this is a more advanced topic we explored later in our project, so we won’t cover it here.</p>
+<p>With the growing interest in using machine learning in GLAMs, there are an increasing number of datasets you might be able to use as a starting point. Good places to look for these datasets include:</p>
+<ul>
+<li><a href="https://huggingface.co/datasets">Hugging Face datasets hub</a> (in particular, the <a href="https://huggingface.co/biglam">BigLAM</a> organization is explicitly trying to make more GLAM data available;e for machine learning.</li>
+<li><a href="https://zenodo.org/">Zenodo</a></li>
+</ul>
+</section>
+<section id="data-tools" class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="data-tools"><span class="header-section-number">5.0.2</span> Data tools</h3>
+<p>TODO</p>
+</section>
+<section id="how-to-ensure-were-using-our-annotated-data-carefully" class="level3" data-number="5.0.3">
+<h3 data-number="5.0.3" class="anchored" data-anchor-id="how-to-ensure-were-using-our-annotated-data-carefully"><span class="header-section-number">5.0.3</span> How to ensure we’re using our annotated data carefully?</h3>
+<p>Whilst creating our annotated data is one important step in a machine learning project we have to consider how to use this data carefully. The next chapter will discuss some of these considerations in a little more detail.</p>
 
 
 </section>
@@ -343,11 +332,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./creating-training-data-annotation.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating training data: annotation</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -49,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./business_problem.html" rel="prev">
+<link href="./creating-training-data-continued.html" rel="next">
+<link href="./data.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,31 +115,51 @@ div.csl-indent {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introduction</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./business_problem.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects: defining the ‘problem’</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./data.html" class="sidebar-item-text sidebar-link">Data</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./creating-training-data-annotation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Creating training data: annotation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./creating-training-data-continued.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -200,7 +220,7 @@ div.csl-indent {
 </section>
 <section id="crowdsource-via-volunteers" class="level3" data-number="4.0.3">
 <h3 data-number="4.0.3" class="anchored" data-anchor-id="crowdsource-via-volunteers"><span class="header-section-number">4.0.3</span> Crowdsource via volunteers 💝</h3>
-<p>Another potential option is to use crowdsourcing via volunteers. This is a well-established practice in GLAMs for generating collection data and allowing people to explore and contribute to research. There are also nice examples of crowdsourced data being used to train computer vision models, for example, the Newspaper Navigator project <span class="citation" data-cites="Lee2020TheNN">Lee et al. (<a href="references.html#ref-Lee2020TheNN" role="doc-biblioref">2020</a>)</span> used training data generated from <a href="https://labs.loc.gov/work/experiments/beyond-words/">Beyond Words</a> to train an object detection model for historic newspapers. Whilst this data wasn’t created for training machine learning models it was still possible to use the data for this purpose.</p>
+<p>Another potential option is to use crowdsourcing via volunteers. This is a well-established practice in GLAMs for generating collection data and allowing people to explore and contribute to research. There are also nice examples of crowdsourced data being used to train computer vision models, for example, the Newspaper Navigator project <span class="citation" data-cites="Lee2020TheNN">Lee et al.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></span> used training data generated from <a href="https://labs.loc.gov/work/experiments/beyond-words/">Beyond Words</a> to train an object detection model for historic newspapers. Whilst this data wasn’t created for training machine learning models it was still possible to use the data for this purpose.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -233,7 +253,7 @@ Note
 <p>In our case, each image should belong to only one category e.g.&nbsp;<code>CONTAINER</code> so any images matching this category should go in this folder.</p>
 <section id="why-did-we-use-this-approach" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="why-did-we-use-this-approach"><span class="header-section-number">4.1.1</span> Why did we use this approach?</h3>
-<p>Organising data and the associated labels in this folder is a fairly standard way of distributing machine learning datasets. This format is supported in various downstream machine-learning frameworks.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Organising data and the associated labels in this folder is a fairly standard way of distributing machine learning datasets. This format is supported in various downstream machine-learning frameworks.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p>However, whilst this is often used as a ‘distribution’ format, it is perhaps slightly unusual to use it to collect annotations. The reason we chose to use this approach:</p>
 <ul>
 <li>minimal setup costs (both in terms of time, effort and cost);</li>
@@ -263,9 +283,9 @@ Note
 <p>An exploding number of start-ups and companies are promising to have solved data labeling and curation once and for all, so this list is not comprehensive. Each tool or platform will have benefits and limitations that should be considered. Sharing insights into using these platforms and tools for generating training data is a potential area for further GLAM collaboration, particularly as setting up some annotation tasks is a non-trivial process. There are substantial advantages to using an open-source tool, but this should not be the sole consideration.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-Lee2020TheNN" class="csl-entry" role="doc-biblioentry">
-Lee, B., Jaime Mears, Eileen Jakeway, Meghan M. Ferriter, Chris Adams, Nathan Yarasavage, Deborah Thomas, Kate Zwaard, and Daniel S. Weld. 2020. <span>“The Newspaper Navigator Dataset: Extracting Headlines and Visual Content from 16 Million Historic Newspaper Pages in Chronicling America.”</span> <em>Proceedings of the 29th ACM International Conference on Information &amp; Knowledge Management</em>.
+Lee, B., Jaime Mears, Eileen Jakeway, Meghan M. Ferriter, Chris Adams, Nathan Yarasavage, Deborah Thomas, Kate Zwaard, and Daniel S. Weld. <span>“The Newspaper Navigator Dataset: Extracting Headlines and Visual Content from 16 Million Historic Newspaper Pages in Chronicling America.”</span> <em>Proceedings of the 29th ACM International Conference on Information &amp; Knowledge Management</em>, 2020.
 </div>
 </div>
 </section>
@@ -273,7 +293,8 @@ Lee, B., Jaime Mears, Eileen Jakeway, Meghan M. Ferriter, Chris Adams, Nathan Ya
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>For example <a href="https://keras.io/api/preprocessing/image/#image_dataset_from_directory-function">Keras</a>, <a href="https://pytorch.org/vision/stable/datasets.html#imagefolder">Pytorch</a> and <a href="https://docs.fast.ai/vision.data.html#imagedataloaders.from_folder">fastai</a> all support loading image data from this folder structure.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><a href="#ref-Lee2020TheNN" role="doc-biblioref"><span>“The Newspaper Navigator Dataset”</span></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For example <a href="https://keras.io/api/preprocessing/image/#image_dataset_from_directory-function">Keras</a>, <a href="https://pytorch.org/vision/stable/datasets.html#imagefolder">Pytorch</a> and <a href="https://docs.fast.ai/vision.data.html#imagedataloaders.from_folder">fastai</a> all support loading image data from this folder structure.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -413,13 +434,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./business_problem.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approaching ML projects: defining the ‘problem’</span></span>
+      <a href="./data.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./creating-training-data-continued.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Creating training data: other considerations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
