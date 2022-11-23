@@ -1,5 +1,5 @@
 
-## Creating training data
+## Creating training data: annotation
 
 When developing our project we used a [supervised machine-learning](https://en.wikipedia.org/wiki/Supervised_learning) approach. This means that our model "learns" from seeing examples of input data; in this case, images and examples of the labels we want these images to have. In our particular example, this would mean the model has examples of "fake" flysheets and real flysheets to learn to detect those incorrectly labeled.
 
