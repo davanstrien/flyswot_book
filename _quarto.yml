@@ -37,6 +37,9 @@ format:
   html:
     theme: cosmo
 
+website:
+  google-analytics: "G-95YE9MZB1T"
+
   #pdf:
 #     documentclass: scrreprt
 
