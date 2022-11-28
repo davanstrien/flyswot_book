@@ -29,10 +29,3 @@ True reproducibility is not always that easy to achieve in machine learning. We 
 shouldn't change. However, there is quite a bit of potential randomness in machine-learning models that can result in different outputs occurring for code that appears to be the same. There are ways of trying to get around this but we flag this to be clear about what we mean here. 
 :::
 
-Pipeline tools 
-
-### DVC 
-
-What we might consider if we were starting this project now. 
-
-![](assets/integrations_hero_469d7e055f.webp)
